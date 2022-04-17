@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 3vh 0;
+}
+body #full {
+  padding: 2vh 0;
+  border: 2px solid black;
+  width: 50vw;
+  height: 50vh;
+  margin: 0 auto;
+}
+body #full .character {
+  position: relative;
+  top: 40vh;
+  width: 5vw;
+  height: 8vh;
+  background-color: red;
+  animation: jump 0.3s linear;
+}
+@keyframes jump {
+  0% {
+    top: 40vh;
+  }
+  30% {
+    top: 32vh;
+  }
+}
+body #full .block {
+  position: relative;
+  background-color: blue;
+  width: 5vw;
+  height: 4vh;
+  top: 36vh;
+  left: 50vw;
+  animation: blocker 1s infinite linear;
+}
+@keyframes blocker {
+  0% {
+    left: 50vw;
+  }
+  30% {
+    left: 35vw;
+  }
+  50% {
+    left: 25vw;
+  }
+  75% {
+    left: 10vw;
+  }
+  100% {
+    left: -3vw;
+  }
+}
+
+/*# sourceMappingURL=jump.css.map */
