@@ -7,9 +7,10 @@
 
 body {
     padding: 3vh 0;
+    background-color: black;
     #full {
         padding: 2vh 0;
-        border: 2px solid black;
+        border: 2px solid #d3d3d3;
         width: 50vw;
         height: 50vh;
         margin: 0 auto;
@@ -19,16 +20,16 @@ body {
             width: 5vw;
             height: 8vh;
             background-color: red;
+        }
+        .animation {
             animation: jump .3s linear;
-            .animationChar {
-                @keyframes jump {
-                    0% {
-                        top: 40vh;
-                    }
-                    30% {
-                        top: 32vh;
-                    }
-                }
+        }
+        @keyframes jump {
+            from {
+                top: 40vh;
+            }
+            to {
+                top: 32vh;
             }
         }
         .block {
@@ -39,25 +40,42 @@ body {
             top: 36vh;
             left: 50vw;
             animation: blocker 1s infinite linear;
-            .animationBlock {
-                @keyframes blocker {
-                    0% {
-                        left: 50vw;
-                    }
-                    30% {
-                        left: 35vw;
-                    }
-                    50% {
-                        left: 25vw;
-                    }
-                    75% {
-                        left: 10vw;
-                    }
-                    100% {
-                        left: -3vw;
-                    }
-                }
+        }
+        @keyframes blocker {
+            0% {
+                left: 50vw;
             }
+            30% {
+                left: 35vw;
+            }
+            50% {
+                left: 25vw;
+            }
+            75% {
+                left: 10vw;
+            }
+            100% {
+                left: -3vw;
+            }
+        }
+    }
+}
+
+.restart {
+    display: grid;
+    place-items: center;
+    .reset {
+        margin: 3% 0;
+        padding: 1% 3%;
+        color: red;
+        background-color: transparent;
+        border: none;
+        border: 2px solid red;
+        border-radius: 3px;
+        transition: .7s linear;
+        &:hover {
+            background-color: red;
+            color: white;
         }
     }
 }

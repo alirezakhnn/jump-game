@@ -7,10 +7,11 @@
 
 body {
   padding: 3vh 0;
+  background-color: black;
 }
 body #full {
   padding: 2vh 0;
-  border: 2px solid black;
+  border: 2px solid #d3d3d3;
   width: 50vw;
   height: 50vh;
   margin: 0 auto;
@@ -21,13 +22,15 @@ body #full .character {
   width: 5vw;
   height: 8vh;
   background-color: red;
+}
+body #full .animation {
   animation: jump 0.3s linear;
 }
 @keyframes jump {
-  0% {
+  from {
     top: 40vh;
   }
-  30% {
+  to {
     top: 32vh;
   }
 }
@@ -56,6 +59,25 @@ body #full .block {
   100% {
     left: -3vw;
   }
+}
+
+.restart {
+  display: grid;
+  place-items: center;
+}
+.restart .reset {
+  margin: 3% 0;
+  padding: 1% 3%;
+  color: red;
+  background-color: transparent;
+  border: none;
+  border: 2px solid red;
+  border-radius: 3px;
+  transition: 0.7s linear;
+}
+.restart .reset:hover {
+  background-color: red;
+  color: white;
 }
 
 /*# sourceMappingURL=jump.css.map */

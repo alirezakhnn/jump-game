@@ -1,0 +1,12 @@
+{
+    "name": "jump-game",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "jump": "sass --watch jump.scss:jump.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
