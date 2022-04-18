@@ -17,8 +17,5 @@ function jump() {
     }, 500);
 }
 startBtn.addEventListener('click', function() {
-    setInterval(() => {
-        block.classList.add('blockanim');
-    }, 1500)
-
+    block.classList.add('blockanim');
 })
