@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" onclick="jump()">
+<html lang="en">
 
 <head>
     <link rel="stylesheet" href="./jump.css">
@@ -10,13 +10,18 @@
 </head>
 
 <body>
-    <div id="full">
+    <div id="full" onclick="jump()">
         <div class="character"></div>
         <div class="block"></div>
     </div>
-    <div class="restart">
-        <button class="reset">restart</button>
+    <div class="score-container">
+        <span class="score">score :</span>
     </div>
+    <div class="restart">
+        <button class="restart-again-btn">start</button>
+        <button class="restart-again-btn">try again</button>
+    </div>
+    <p class="health">health :</p>
     <script src="./jump.js"></script>
 </body>
 

@@ -24,14 +24,23 @@ body #full .character {
   background-color: red;
 }
 body #full .animation {
-  animation: jump 0.3s linear;
+  animation: jump 0.5s linear;
 }
 @keyframes jump {
-  from {
+  0% {
     top: 40vh;
   }
-  to {
+  30% {
     top: 32vh;
+  }
+  50% {
+    top: 32vh;
+  }
+  75% {
+    top: 35vh;
+  }
+  100% {
+    top: 40vh;
   }
 }
 body #full .block {
@@ -41,7 +50,9 @@ body #full .block {
   height: 4vh;
   top: 36vh;
   left: 50vw;
-  animation: blocker 1s infinite linear;
+}
+body #full .blockanim {
+  animation: blocker 1.5s infinite linear;
 }
 @keyframes blocker {
   0% {
@@ -61,23 +72,40 @@ body #full .block {
   }
 }
 
-.restart {
+.score-container {
   display: grid;
   place-items: center;
 }
-.restart .reset {
-  margin: 3% 0;
-  padding: 1% 3%;
+.score-container .score {
   color: red;
-  background-color: transparent;
+  margin: 2% 0;
+  font-size: 18px;
+}
+
+.restart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restart-again-btn {
+  margin: 2% 5%;
+  padding: 1.5% 1%;
+  background: transparent;
+  color: red;
   border: none;
   border: 2px solid red;
   border-radius: 3px;
-  transition: 0.7s linear;
+  transition: 0.7s ease-in-out;
 }
-.restart .reset:hover {
-  background-color: red;
+.restart-again-btn:hover {
+  background: red;
   color: white;
+}
+
+.health {
+  text-align: center;
+  color: #ffb300;
+  margin: 3vh 0;
 }
 
 /*# sourceMappingURL=jump.css.map */
