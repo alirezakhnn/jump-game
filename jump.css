@@ -16,9 +16,13 @@ body #full {
   height: 50vh;
   margin: 0 auto;
 }
+body #full .guide {
+  color: white;
+  text-align: center;
+}
 body #full .character {
   position: relative;
-  top: 40vh;
+  top: 37vh;
   width: 5vw;
   height: 8vh;
   background-color: red;
@@ -31,10 +35,10 @@ body #full .animation {
     top: 40vh;
   }
   30% {
-    top: 32vh;
+    top: 30vh;
   }
   50% {
-    top: 32vh;
+    top: 30vh;
   }
   75% {
     top: 35vh;
@@ -48,7 +52,7 @@ body #full .block {
   background-color: blue;
   width: 5vw;
   height: 4vh;
-  top: 36vh;
+  top: 33vh;
   left: 50vw;
 }
 body #full .blockanim {
