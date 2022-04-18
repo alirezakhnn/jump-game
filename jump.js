@@ -3,9 +3,9 @@ var character = document.querySelector('.character');
 var block = document.querySelector('.block');
 var score = document.querySelector('.score');
 var counter = 0;
-var characterTop = window.getComputedStyle(character).getPropertyValue('top');
-var blockLeft = window.getComputedStyle(block).getPropertyValue('left');
-var btnAgain = document.querySelector('.restart-again-btn');
+var charTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+var btnAgain = document.querySelector('.restart button:nth-child(2)');
 var startBtn = document.querySelector('.restart button:nth-child(1)');
 var health = document.querySelector('.health');
 var remain = 5;
@@ -18,4 +18,15 @@ function jump() {
 }
 startBtn.addEventListener('click', function() {
     block.classList.add('blockanim');
+    startBtn.innerHTML = '2x to stop';
+    health.innerHTML = 'you have ' + remain + ' health';
+    score.innerHTML = 'you have ' + counter + ' points';
+    startBtn.ondblclick = () => {
+        block.classList.remove('blockanim');
+        startBtn.innerHTML = 'start';
+    }
 })
+
+btnAgain.onclick = () => {
+    window.location.reload();
+}
