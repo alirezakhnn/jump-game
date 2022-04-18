@@ -3,9 +3,9 @@ var character = document.querySelector('.character');
 var block = document.querySelector('.block');
 var score = document.querySelector('.score');
 var counter = 0;
-var characterTop = window.getComputedStyle(character).getPropertyValue('top');
-var blockLeft = window.getComputedStyle(block).getPropertyValue('left');
-var btnAgain = document.querySelector('.restart-again-btn');
+var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue('top'));
+var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
+var btnAgain = document.querySelector('.restart button:nth-child(2)');
 var startBtn = document.querySelector('.restart button:nth-child(1)');
 var health = document.querySelector('.health');
 var remain = 5;
@@ -17,8 +17,23 @@ function jump() {
     }, 500);
 }
 startBtn.addEventListener('click', function() {
-    setInterval(() => {
-        block.classList.add('blockanim');
-    }, 1500)
+    block.classList.add('blockanim');
+    startBtn.innerHTML = 'pause';
+    if (blockLeft <= 12 && characterTop >= 285) {
+        alert('crash');
+        health.innerHTML = 'you have ' + Number(remain - 1) + ' health';
+        if (remaim == 0) {
+            score.innerHTML = 'your score is ' + Number(counter);
+            counter = 0;
+        }
+    } else {
+        counter++;
+        health.innerHTML = 'you have ' + Number(remain) + ' health';
+
+    }
 
 })
+
+btnAgain.onclick = () => {
+    window.location.reload();
+}
