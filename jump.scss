@@ -26,7 +26,7 @@ body {
             background-color: red;
         }
         .animation {
-            animation: jump .5s linear;
+            animation: jump .6s linear;
         }
         @keyframes jump {
             0% {
@@ -42,18 +42,18 @@ body {
                 top: 35vh;
             }
             100% {
-                top: 40vh
+                top: 40vh;
             }
         }
         .block {
             position: relative;
             background-color: blue;
             width: 5vw;
-            height: 4vh;
-            top: 33vh;
+            height: 3vh;
+            top: 34vh;
             left: 50vw;
         }
-        .blockanim {
+        .block-anim {
             animation: blocker 1.5s infinite linear;
         }
         @keyframes blocker {
@@ -61,16 +61,16 @@ body {
                 left: 50vw;
             }
             30% {
-                left: 35vw;
+                left: 30vw;
             }
             50% {
-                left: 25vw;
-            }
-            75% {
                 left: 10vw;
             }
+            75% {
+                left: -10vw;
+            }
             100% {
-                left: -3vw;
+                left: -20vw;
             }
         }
     }
