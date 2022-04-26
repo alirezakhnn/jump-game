@@ -9,10 +9,10 @@ body {
     padding: 3vh 0;
     background-color: black;
     #full {
-        padding: 2vh 0;
+        padding: 13px 0;
         border: 2px solid #d3d3d3;
-        width: 50vw;
-        height: 50vh;
+        width: 260px;
+        height: 349px;
         margin: 0 auto;
         .guide {
             color: white;
@@ -20,9 +20,9 @@ body {
         }
         .character {
             position: relative;
-            top: 37vh;
-            width: 5vw;
-            height: 8vh;
+            top: 257px;
+            width: 25px;
+            height: 56px;
             background-color: red;
         }
         .animation {
@@ -48,34 +48,35 @@ body {
         .block {
             position: relative;
             background-color: blue;
-            width: 5vw;
-            height: 3vh;
-            top: 34vh;
-            left: 50vw;
+            width: 25px;
+            height: 20px;
+            top: 236px;
+            left: 265px;
         }
         .block-anim {
             animation: blocker 1.5s infinite linear;
         }
         @keyframes blocker {
             0% {
-                left: 50vw;
+                left: 265px;
             }
             30% {
-                left: 30vw;
+                left: 155px;
             }
             50% {
-                left: 10vw;
+                left: 105px;
             }
             75% {
-                left: -10vw;
+                left: 55px;
             }
             100% {
-                left: -20vw;
+                left: -25px;
             }
         }
     }
 }
 
+// here is to continue
 .score-container {
     display: grid;
     place-items: center;
