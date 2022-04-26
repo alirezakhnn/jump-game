@@ -10,10 +10,10 @@ body {
   background-color: black;
 }
 body #full {
-  padding: 2vh 0;
+  padding: 13px 0;
   border: 2px solid #d3d3d3;
-  width: 50vw;
-  height: 50vh;
+  width: 260px;
+  height: 349px;
   margin: 0 auto;
 }
 body #full .guide {
@@ -22,13 +22,13 @@ body #full .guide {
 }
 body #full .character {
   position: relative;
-  top: 37vh;
-  width: 5vw;
-  height: 8vh;
+  top: 257px;
+  width: 25px;
+  height: 56px;
   background-color: red;
 }
 body #full .animation {
-  animation: jump 0.5s linear;
+  animation: jump 0.6s linear;
 }
 @keyframes jump {
   0% {
@@ -50,29 +50,29 @@ body #full .animation {
 body #full .block {
   position: relative;
   background-color: blue;
-  width: 5vw;
-  height: 4vh;
-  top: 33vh;
-  left: 50vw;
+  width: 25px;
+  height: 20px;
+  top: 236px;
+  left: 265px;
 }
-body #full .blockanim {
+body #full .block-anim {
   animation: blocker 1.5s infinite linear;
 }
 @keyframes blocker {
   0% {
-    left: 50vw;
+    left: 265px;
   }
   30% {
-    left: 35vw;
+    left: 155px;
   }
   50% {
-    left: 25vw;
+    left: 105px;
   }
   75% {
-    left: 10vw;
+    left: 55px;
   }
   100% {
-    left: -3vw;
+    left: -25px;
   }
 }
 
