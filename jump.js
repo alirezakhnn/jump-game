@@ -11,6 +11,14 @@ var remain = 5;
 
 function jump() {
     character.classList.add('animation');
+}
+function fall() {
+        setTimeout(() => {
+        character.classList.remove('animation');
+    }, 600);
+}
+function rise() {
+    character.classList.add('animation');
     setTimeout(() => {
         character.classList.remove('animation');
     }, 600);
@@ -49,7 +57,6 @@ startBtn.addEventListener('click', () => {
         }
     }, 124)
 
-    //my problem is handle the score;
 })
 
 startBtn.ondblclick = () => {
